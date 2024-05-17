@@ -1,4 +1,4 @@
-
+import pdf from '../../../../public/documents/cv_kevin_sarria.pdf';
 
 export const Header = () => {
     return (
@@ -21,6 +21,7 @@ export const Header = () => {
                     <a href="#about-me" className="navegacion__link">Sobre Mi</a>
                     <a href="#projects" className="navegacion__link">Proyectos</a>
                     <a href="#contact-me" className="navegacion__link">Contacto</a>
+                    <a href={pdf} target='_blank' className="navegacion__link">Descargar CV</a>
                 </nav>
             </div>
 
