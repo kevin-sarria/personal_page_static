@@ -1,6 +1,14 @@
+import { useEffect, useState } from 'react';
 import pdf from '../../../../public/documents/cv_kevin_sarria.pdf';
 
 export const Header = () => {
+
+    const [ isOpenMenu, setIsOpenMenu ] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpenMenu( (prev) => !prev );
+    }
+
     return (
         
         <header className="header-public">
@@ -13,10 +21,10 @@ export const Header = () => {
                 </a>
 
                 <div className="menu-icon">
-                    <div className="icon"></div>
+                    <div className="icon" onClick={toggleMenu}></div>
                 </div>
 
-                <nav className="navegacion">
+                <nav className={`navegacion ${ isOpenMenu ? 'navegacion--active' : '' }`}>
                     <a href="#" className="navegacion__link">Inicio</a>
                     <a href="#about-me" className="navegacion__link">Sobre Mi</a>
                     <a href="#projects" className="navegacion__link">Proyectos</a>

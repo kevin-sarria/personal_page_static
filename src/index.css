@@ -120,7 +120,7 @@ body {
 }
 
 .barra-navegacion {
-    @apply md:flex lg:gap-y-5 md:items-center md:justify-between md:px-20 lg:h-28;
+    @apply md:flex gap-x-3 lg:gap-y-5 md:items-center md:justify-between md:px-20 lg:h-28;
 }
 
 .logo {
@@ -136,7 +136,11 @@ body {
 }
 
 .navegacion {
-    @apply hidden lg:flex flex-col lg:flex-row items-center gap-5;
+    @apply hidden md:flex flex-col md:flex-row items-center gap-5 transition-transform duration-300 ease-in-out;
+}
+
+.navegacion--active {
+    @apply flex mx-auto;
 }
 
 .menu-icon {
@@ -144,17 +148,17 @@ body {
 }
 
 .menu-icon .icon {
-    @apply relative block mt-5 w-8 h-1 bg-slate-800 mx-auto;
+    @apply relative block md:hidden mt-5 w-8 h-1 bg-slate-800 mx-auto;
 }
 
 .menu-icon .icon::before {
     content: '';
-    @apply absolute lg:hidden w-8 h-1 bg-slate-800 -top-2;
+    @apply absolute md:hidden w-8 h-1 bg-slate-800 -top-2;
 }
 
 .menu-icon .icon::after {
     content: '';
-    @apply absolute lg:hidden w-8 h-1 bg-slate-800 top-2;
+    @apply absolute md:hidden w-8 h-1 bg-slate-800 top-2;
 }
 
 .navegacion__link {
